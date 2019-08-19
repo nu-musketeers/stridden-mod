@@ -1,0 +1,10 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "facing=north": { "model": "enrich:compactor" },
+        "facing=south": { "model": "enrich:compactor", "y": 180 },
+        "facing=west":  { "model": "enrich:compactor", "y": 270 },
+        "facing=east":  { "model": "enrich:compactor", "y": 90 },
+        "inventory": { "model": "enrich:compactor" }
+    }
+}

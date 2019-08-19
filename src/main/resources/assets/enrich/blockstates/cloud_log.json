@@ -1,0 +1,9 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "axis=y":  { "model": "enrich:cloud_log" },
+        "axis=z":   { "model": "enrich:cloud_log", "x": 90 },
+        "axis=x":   { "model": "enrich:cloud_log", "x": 90, "y": 90 },
+        "axis=none": { "model": "enrich:cloud_log" }
+    }
+}

@@ -8,7 +8,7 @@ For Windows, use `gradlew` instead of `./gradlew`
 
 ### Both Eclipse/IntelliJ
 1. Navigate to your workspace
-2. Run `git clone <repository url ending with .git>`
+2. Run `git clone https://github.com/nu-musketeers/stridden-mod.git`
 3. Navigate into local repo
 4. Run `./gradlew setupDecompWorkspace`
 
