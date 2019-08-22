@@ -1,0 +1,14 @@
+{
+    "forge_marker": 1,
+     "defaults": {
+        "textures": {
+            "particle": "enrich:blocks/cloud"
+        },
+        "model": "enrich:cloud",
+        "uvlock": true
+    },
+    "variants": {
+        "normal": [{ }],
+        "inventory": [{ }]
+    }
+}

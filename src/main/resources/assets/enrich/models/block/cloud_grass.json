@@ -1,0 +1,6 @@
+{
+    "parent": "block/tinted_cross",
+    "textures": {
+        "cross": "enrich:blocks/cloud_grass"
+    }
+}
