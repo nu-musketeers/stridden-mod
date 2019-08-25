@@ -1,0 +1,7 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "normal": { "model": "enrich:ore_gen" },
+    "inventory": { "model": "enrich:ore_gen" }
+  }
+}

@@ -23,6 +23,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
+import stridden.enrich.containers.ContainerOreGen;
 
 // TODO: Auto-generated Javadoc
 public class GuiHandler implements IGuiHandler
@@ -30,7 +31,7 @@ public class GuiHandler implements IGuiHandler
     // enumerate guis
     public enum GUI_ENUM
     {
-        COMPACTOR
+        COMPACTOR, ORE_GEN
     }
 
     /* (non-Javadoc)
@@ -51,6 +52,10 @@ public class GuiHandler implements IGuiHandler
                 // DEBUG
                 System.out.println("GUI handler server element creating ContainerCompactor");
                 return new ContainerCompactor(player.inventory, (IInventory) tileEntity);
+            }
+            if(ID == GUI_ENUM.ORE_GEN.ordinal())
+            {
+                return new ContainerOreGen(player.inventory, (IInventory) tileEntity);
             }
         }
         // could process those GUIs that do not have associated entities (i.e. instant results) here
@@ -75,6 +80,10 @@ public class GuiHandler implements IGuiHandler
                 // DEBUG
                 System.out.println("GUI handler client element creating GUICompactor");
                 return new GuiCompactor(player.inventory, (IInventory) tileEntity);
+            }
+            if(ID == GUI_ENUM.ORE_GEN.ordinal())
+            {
+                return new GuiOreGen(player.inventory, (IInventory) tileEntity);
             }
         }
         // could process those GUIs that do not have associated entities (i.e. instant results) here

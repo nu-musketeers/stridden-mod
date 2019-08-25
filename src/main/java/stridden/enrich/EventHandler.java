@@ -20,6 +20,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Random;
 
+import net.minecraftforge.oredict.OreDictionary;
 import stridden.enrich.init.ModBlocks;
 import stridden.enrich.init.ModConfig;
 import stridden.enrich.init.ModEnchantments;
@@ -58,6 +59,7 @@ import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
+import stridden.enrich.tileentities.TileEntityOreGen;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -1177,6 +1179,15 @@ public class EventHandler
             {
                 ModTriggers.PLACE_CLOUD_SAPLING.trigger(thePlayerMP);
             }
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public static void onEvent(OreDictionary.OreRegisterEvent event)
+    {
+        if(event.getName().substring(0,3).equals("ore"))
+        {
+            TileEntityOreGen.ORES.add(event.getOre());
         }
     }
 }

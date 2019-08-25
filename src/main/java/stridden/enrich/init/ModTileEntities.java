@@ -18,6 +18,7 @@ package stridden.enrich.init;
 import stridden.enrich.tileentities.TileEntityCompactor;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import stridden.enrich.tileentities.TileEntityOreGen;
 
 public class ModTileEntities
 {
@@ -29,6 +30,7 @@ public class ModTileEntities
         // DEBUG
         System.out.println("Registering tile entities");
         GameRegistry.registerTileEntity(TileEntityCompactor.class, "tileEntityCompactor");
+        GameRegistry.registerTileEntity(TileEntityOreGen.class, "tileEntityOreGen");
     }
 
 }

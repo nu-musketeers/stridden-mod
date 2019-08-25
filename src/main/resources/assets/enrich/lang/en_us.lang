@@ -8,8 +8,11 @@ tile.cloud_grass.name=Cloud Grass
 tile.cloud_flower.name=Cloud Tulip
 tile.stone.stone.name=Stone Mod
 
+tile.ore_gen.name=Ore Generator
+
 # GUIs
 container.compactor=Compactor
+container.ore_gen=Ore Generator
 
 # Items
 item.cow_hide.name=Cow Hide

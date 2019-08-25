@@ -16,15 +16,7 @@
 package stridden.enrich.init;
 
 import stridden.enrich.MainMod;
-import stridden.enrich.blocks.BlockCloud;
-import stridden.enrich.blocks.BlockCloudBedrock;
-import stridden.enrich.blocks.BlockCompactor;
-import stridden.enrich.blocks.BlockFlowerCloud;
-import stridden.enrich.blocks.BlockGrassCloud;
-import stridden.enrich.blocks.BlockLeavesCloud;
-import stridden.enrich.blocks.BlockLogCloud;
-import stridden.enrich.blocks.BlockParticleEmitter;
-import stridden.enrich.blocks.BlockSaplingCloud;
+import stridden.enrich.blocks.*;
 import stridden.enrich.blocks.fluids.ModBlockFluidClassic;
 import stridden.enrich.utilities.Utilities;
 
@@ -67,6 +59,8 @@ public class ModBlocks
     public static final BlockGrassCloud cloud_grass = null;
     public static final BlockFlowerCloud cloud_flower = null;
     public static final BlockParticleEmitter particle_emitter = null;
+
+    public static final BlockOreGen ore_gen = null;
     
     /*
      * ItemBlock instances
@@ -91,6 +85,9 @@ public class ModBlocks
     public static final ItemBlock item_block_cloud_grass = null;
     @ObjectHolder("particle_emitter")
     public static final ItemBlock item_block_particle_emitter = null;
+
+    @ObjectHolder("ore_gen")
+    public static final ItemBlock item_block_ore_gen = null;
 
     @EventBusSubscriber(modid = MainMod.MODID)
     public static class RegistrationHandler
@@ -118,6 +115,8 @@ public class ModBlocks
             registry.register(Utilities.setBlockName(new BlockGrassCloud(), "cloud_grass"));
             registry.register(Utilities.setBlockName(new BlockFlowerCloud(), "cloud_flower"));
             registry.register(Utilities.setBlockName(new BlockParticleEmitter(), "particle_emitter"));
+
+            registry.register(Utilities.setBlockName(new BlockOreGen(), "ore_gen"));
         }
 
         /**
@@ -155,6 +154,8 @@ public class ModBlocks
             registry.register(Utilities.setItemName(new ItemBlock(cloud_grass), cloud_grass.getRegistryName().getResourcePath()));
             registry.register(Utilities.setItemName(new ItemBlock(cloud_flower), cloud_flower.getRegistryName().getResourcePath()));
             registry.register(Utilities.setItemName(new ItemBlock(particle_emitter), particle_emitter.getRegistryName().getResourcePath()));
+
+            registry.register(Utilities.setItemName(new ItemBlock(ore_gen), ore_gen.getRegistryName().getResourcePath()));
         }
 
         /**
@@ -179,6 +180,8 @@ public class ModBlocks
             registerBlockModel(cloud_grass);
             registerBlockModel(cloud_flower);
             registerBlockModel(particle_emitter);
+
+            registerBlockModel(ore_gen);
             registerItemBlockModels();
         }
     }
@@ -226,6 +229,8 @@ public class ModBlocks
         registerItemBlockModel(item_block_cloud_grass);
         registerItemBlockModel(item_block_cloud_flower);
         registerItemBlockModel(item_block_particle_emitter);
+
+        registerItemBlockModel(item_block_ore_gen);
     }
 
     /**

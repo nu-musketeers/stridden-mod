@@ -63,7 +63,7 @@ public class MainMod
 {
     public static final String MODID = "enrich";
     public static final String MODNAME = "Enrich";
-    public static final String MODVERSION = "1.0.1";
+    public static final String MODVERSION = "1.0.2";
     public static final String MODDESCRIPTION = "A Minecraft mod centered around ores and resources";
     public static final String MODAUTHOR = "Stridden";
     public static final String MODCREDITS = "jabelar, the Nu Musketeers GitHub Organization (including Lightrixian and Opcode), and contributors like you!";
